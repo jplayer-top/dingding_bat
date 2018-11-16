@@ -10,5 +10,5 @@
 
 --- 
  
-![1](http://qiniu.jplayer.top/1112213432.gif)
-![2](http://qiniu.jplayer.top/11122132.gif)
+![1](./1112213432.gif)
+![2](./11122132.gif)
