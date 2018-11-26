@@ -12,8 +12,14 @@ if %errorlevel% equ 0 (
 	:: 锁屏状态开屏(不可设置密码或指纹)
 	adb shell input keyevent 26
 	adb shell input keyevent 3
-	adb shell input swipe 300 800 300 200
+	adb shell input swipe 300 1800 300 800
 )
+::adb shell settings get secure enabled_accessibility_services获取无障碍列表
+::adb 指定 到 无障碍服务 并关闭其他已开启的无障碍
+adb shell settings put secure enabled_accessibility_services top.jplayer.quick_test1.debug/top.jplayer.baseprolibrary.alive.service.CustomAccessibilityService 
+:: 1 开启服务
+adb shell settings put secure accessibility_enabled 1
+
 ::回到手机主页
 adb shell input keyevent 3
 ::开启服务
@@ -35,9 +41,9 @@ set ss=%time:~6,2%
 set filename=%yy%%mm%%dd%%hh%%mn%%ss%
 set delay=5
 set /a am=%random%
-set /a am=am%%1000+1
+set /a am=am%%600+1
 set /a pm=%random%
-set /a pm=pm%%120+1
+set /a pm=pm%%600+1
 :: 打卡操作
 if %HOUR% LEQ 16  if %HOUR% GEQ 11 (
 	echo 非打卡时间

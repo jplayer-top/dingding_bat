@@ -3,11 +3,7 @@
 echo 记得写周报
 set day=%date:~-1%
 :a
-if %day%==六 (
-	echo %day%
-	choice /t 5 /d y /n >nul
-	exit
-)
+
 if %day%==七 (
 	echo %day%
 	choice /t 5 /d y /n >nul
