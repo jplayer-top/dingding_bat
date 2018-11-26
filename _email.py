@@ -16,7 +16,7 @@ def mail():
         msg['To']=formataddr(["敬爱的 刘大大",my_user])   #括号里的对应收件人邮箱昵称、收件人邮箱账号
         msg['Subject']="打卡成功提醒" #邮件的主题，也可以说是标题
         server=smtplib.SMTP("smtp.qq.com",25)  #发件人邮箱中的SMTP服务器，端口是25
-        server.login(my_sender,"*******")    #括号中对应的是发件人邮箱账号、邮箱密码
+        server.login(my_sender,"******")    #括号中对应的是发件人邮箱账号、邮箱密码
         server.sendmail(my_sender,[my_user,],msg.as_string())   #括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
         server.quit()   #这句是关闭连接的意思
     except Exception as e:   #如果try中的语句没有执行，则会执行下面的ret=False

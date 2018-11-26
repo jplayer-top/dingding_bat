@@ -1,4 +1,4 @@
 :: ±‡¬Î∏Ò Ω GB2312  
 @echo off
-python _email.py
+python _itchat.py
 pause

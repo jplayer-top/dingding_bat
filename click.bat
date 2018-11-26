@@ -21,5 +21,9 @@ choice /t %delay% /d y /n >nul
 del screen.png
 del ftp.up	
 del screen.txt
+::发送邮件
 python _email.py
+::发送短信
+::python ./dysms_python/sms_send.py
+python _itchat.py
 exit
